@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.fondo {
+    width: 100%;
+    height: auto;
+    background-color: rgb(97, 18, 50);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nombre {
+   position: relative;
+}
+
+.nombre h2:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nombre h2:last-child {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.enlaces a:hover {
+  color: #c9c428;
+}
+
+
+/* Estilo normal (pantallas grandes) */
+.nombre h2 {
+  font-size: 24px; /* tamaño que ya usas */
+}
+
+
+@media (max-width: 480px) {
+  .nombre h2 {
+    font-size: 16px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nombre h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre {
+    text-align: center;
+  }
+
+  .fondo {
+    width: 100%;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; /* oculto por defecto */
+  color: white;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 60px;
+  right: -250px; /* oculto inicialmente */
+  width: 200px;
+  height: 100%;
+  background-color:  rgb(97, 18, 50);  /* maroon */
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 10px;
+  z-index: 1000;
+  height: calc(100% - 60px);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+.menu-lateral a:hover {
+  background-color:#ae244d;
+}
+
+.menu-lateral.activo {
+  right: 0; /* aparece */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Ocultar menú superior en pantallas pequeñas */
+  header .enlaces {
+    display: none;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburguesa {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header.fondo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburguesa {
+    margin-top: 8px;
+  }
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e6ecf7);
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+}
+
+
+.avisos-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+
+}
+
+
+.avisos-title {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #9D2449;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.formulario input, .formulario textarea {
+  padding: 12px;
+  border: 1px solid #9D2449;
+  border-radius: 8px;
+  font-size: 1.3em;
+  transition: border-color 0.3s;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+  border-color: #701833;
+  outline: none;
+}
+
+.formulario button {
+  background: #9D2449;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.formulario button:hover {
+  background: #701833;
+  transform: scale(1.05);
+}
+
+
+.aviso {
+  background: #f9fbff;
+  border: 1px solid #dce3f0;
+  border-left: 6px solid #9D2449;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.aviso:hover {
+  transform: translateY(-3px);
+}
+
+.aviso h3 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #9D2449;
+}
+
+.aviso .fecha {
+  font-weight: bold;
+  color: #555;
+  margin: 5px 0 10px;
+}
+
+.aviso p {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}
+
+.aviso img {
+  display: block;        /* convierte la imagen en bloque */
+  margin: 15px auto;     /* margen arriba/abajo y centrado horizontal */
+  max-width: 80%;        /* que no se desborde del aviso */
+  border-radius: 8px;    /* esquinas redondeadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra elegante */
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .avisos-container {
+    padding: 20px;
+  }
+  .avisos-title {
+    font-size: 1.6em;
+  }
+  .formulario input, .formulario textarea {
+    font-size: 0.9em;
+  }
+
+}
+
+
+/* Ocultar el input original que se ve en la imagen c7a0f6ec... */
+#archivo {
+    display: none;
+}
+
+/* Estilo para el nuevo botón de archivo */
+.boton-personalizado {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    color: #9D2449; /* El guinda de tu cabecera */
+    border: 2px solid #9D2449;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el botón de enviar (Subir Aviso) */
+button[type="submit"] {
+    display: table;           
+    margin: 20px auto;        
+    padding: 8px 40px;        
+    background-color: #9D2449; 
+    color: white;
+    border: none;
+    border-radius: 20px;      
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #7c1937; 
+    transform: scale(1.05);    
+}
+
+
+
+
+
+
+
+#btnArriba {
+    display: none;           
+    position: fixed;        
+    bottom: 100px;           
+    right: 30px;            
+    z-index: 1000;         
+    
+    
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;     
+    background-color: #6a1b4d; 
+    color: white;           
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s, transform 0.3s; 
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btnArriba:hover {
+    background-color: #4a1036; 
+    transform: scale(1.1);      
+}
+
+
+#btnArriba:active {
+    transform: scale(0.9);      
+}
+
+
+
+
+footer {
+  background: rgb(97, 18, 50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+}

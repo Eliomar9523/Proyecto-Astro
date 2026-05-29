@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.fondo {
+    width: 100%;
+    height: auto;
+    background-color: rgb(97, 18, 50);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nombre {
+   position: relative;
+}
+
+.nombre h2:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nombre h2:last-child {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.enlaces a:hover {
+  color: #c9c428;
+}
+
+
+
+.nombre h2 {
+  font-size: 24px;
+}
+
+
+@media (max-width: 480px) {
+  .nombre h2 {
+    font-size: 16px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nombre h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre {
+    text-align: center;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+  color: white;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 60px;
+  right: -250px; 
+  width: 200px;
+  height: 100%;
+  background-color:  rgb(97, 18, 50);  
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 10px;
+  z-index: 1000;
+  height: calc(100% - 60px);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+.menu-lateral a:hover {
+  background-color:#ae244d;
+}
+
+.menu-lateral.activo {
+  right: 0;
+}
+
+
+@media (max-width: 768px) {
+  header .enlaces {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header.fondo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburguesa {
+    margin-top: 8px;
+  }
+}
+
+
+
+
+
+.info {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.info h2 {
+    font-size: 2.8rem;
+    color: #9D2449;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+.contenedor {
+    max-width: 700px;
+    width: 90%; 
+    margin: 30px auto; 
+    background-color: #f8f9fa;
+    border: 3px solid #9D2449;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: rgb(97, 18, 50);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .info h2 {
+        font-size: 1.8rem; 
+    }
+
+    .info {
+        padding-top: 100px;
+    }
+
+    .contenedor {
+        width: 95%; 
+        padding: 10px;
+        border-width: 2px;
+    }
+}
+
+
+
+.bloque-horario {
+    width: 90% !important; 
+    max-width: 700px;
+    margin: 40px auto !important; 
+    background-color: #ffffff;
+    border: 3px solid #9D2449; 
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+}
+
+.bloque-horario h3 {
+    color: #9D2449;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.contenido-horario p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.horas {
+    font-size: 1.4rem !important;
+    font-weight: bold;
+    color: #000;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.nota {
+    font-size: 1.0rem !important;
+    color: #666 !important;
+    font-style: italic;
+}
+
+
+@media (max-width: 480px) {
+    .bloque-horario {
+        width: 95% !important;
+        padding: 15px;
+    }
+    .horas {
+        font-size: 1.2rem !important;
+    }
+}
+
+footer {
+  background: rgb(97, 18, 50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+

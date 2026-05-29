@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}
+
+.fondo {
+    width: 100%;
+    height: auto;
+    background-color: rgb(97, 18, 50);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nombre {
+   position: relative;
+}
+
+.nombre h2:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nombre h2:last-child {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.enlaces a:hover {
+  color: #c9c428;
+}
+
+
+
+.nombre h2 {
+  font-size: 24px; 
+}
+
+
+@media (max-width: 480px) {
+  .nombre h2 {
+    font-size: 16px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nombre h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre {
+    text-align: center;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; 
+  color: white;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 60px;
+  right: -250px; 
+  width: 200px;
+  height: 100%;
+  background-color:  rgb(97, 18, 50);  
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 10px;
+  z-index: 1000;
+  height: calc(100% - 60px);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+.menu-lateral a:hover {
+  background-color:#ae244d;
+}
+
+.menu-lateral.activo {
+  right: 0; /* aparece */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Ocultar menú superior en pantallas pequeñas */
+  header .enlaces {
+    display: none;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburguesa {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header.fondo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburguesa {
+    margin-top: 8px;
+  }
+}
+
+
+
+footer {
+  background: rgb(97, 18, 50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+}
+
+
+
+
+/*  seccion libros*/
+
+.material-didactico {
+  padding: 20px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.material-didactico h2 {
+  color: #9D2449; /* Guinda institucional */
+  margin-bottom: 15px;
+  font-size: 200%;
+}
+
+.buscador {
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  padding: 8px;
+  width: 70%; 
+  max-width: 300px;
+  border-radius: 8px
+}
+
+.buscador button {
+  padding: 8px 12px;
+  background-color: #9D2449;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 50px;
+  justify-items: center; 
+  padding-top: 50px
+}
+
+.libro img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); ;
+}
+
+.libro {
+  text-align: center;
+}
+
+.libro img {
+  border: 2px solid #9D2449;
+  border-radius: 5px;
+  width: 150px;      
+  height: 220px;     
+  object-fit: cover; 
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+@media (max-width: 480px) {
+  .libros {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0px;
+  }
+
+  .libro img {
+    width: 80px;   
+    height: 120px;  
+  }
+
+  .libro p {
+    font-size: 10px; 
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buscador input, .buscador button {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+ .libros {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+  }
+}

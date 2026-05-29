@@ -1,0 +1,607 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+ 
+}
+
+.fondo {
+    width: 100%;
+    height: auto;
+    background-color: rgb(97, 18, 50);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nombre {
+   position: relative;
+}
+
+.nombre h2:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nombre h2:last-child {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.enlaces a:hover {
+  color: #c9c428;
+}
+
+
+
+.nombre h2 {
+  font-size: 24px; 
+}
+
+
+@media (max-width: 480px) {
+  .nombre h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nombre h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre {
+    text-align: center;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; 
+  color: white;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 60px;
+  right: -250px; 
+  width: 200px;
+  height: 100%;
+  background-color:  rgb(97, 18, 50);  
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 10px;
+  z-index: 1000;
+  height: calc(100% - 60px);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+.menu-lateral a:hover {
+  background-color:#ae244d;
+}
+
+.menu-lateral.activo {
+  right: 0; 
+}
+
+
+@media (max-width: 768px) {
+  
+  header .enlaces {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header.fondo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburguesa {
+    margin-top: 8px;
+  }
+}
+
+
+
+html {
+    scroll-behavior: smooth; 
+}
+
+
+
+.slider-container {
+    flex-grow: 1; 
+    width: 90%;
+    max-width: 1000px;
+    margin: 120px auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    }
+
+
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+#slides {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-img.activa {
+    opacity: 1;
+}
+
+
+.pantalla-info {
+    min-height: 100vh;
+    padding: 60px 10%;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 70px;
+}
+
+.bloque-texto {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 6px solid #9D2449; /* Detalle rojo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.bloque-texto h2 {
+  color: #9D2449;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.bloque-texto p {
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+}
+
+/*  AJUSTES PARA TELÉFONOS (MÓVIL) */
+@media (max-width: 600px) {
+    .pantalla-inicio {
+        padding-top: 80px;
+        gap: 15px;
+    }
+
+    .sidebar-horizontal {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .info-card {
+        height: 90px;
+    }
+
+    .info-card img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+
+    .info-card span {
+        font-size: 0.55rem;
+    }
+
+    .bloque-texto {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 220px;    
+        width: 92%;       
+        margin: 70px auto; 
+        border-radius: 15px; 
+    }
+
+    
+    .slide-img {
+        object-fit: cover;
+        object-position: center; 
+    }
+}
+
+
+
+
+.contenedor-pastillas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 0px 10px;
+    flex-wrap: wrap; 
+}
+
+/* Estilo de la Pastilla */
+.pastilla {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 50px; /* Forma de píldora */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.pastilla:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* El círculo del icono */
+.icono-bg {
+    background: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.icono-bg img {
+    width: 22px;
+    height: auto;
+}
+
+/* Ajustes para Celulares */
+@media (max-width: 768px) {
+    .contenedor-pastillas {
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .pastilla {
+        width: 80%; /* Ocupan todo el ancho en móvil */
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+
+
+/* El fondo oscuro que cubre toda la pantalla */
+.modal {
+    display: none; /* Se oculta por defecto */
+    position: fixed;
+    z-index: 3000; /* Para que esté por encima de TODO */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+/* La tarjeta blanca central */
+.contenido-modal {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 85%;
+    max-width: 500px; /* En PC no será tan grande */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: slideDown 0.4s ease;
+}
+
+/* Animación de entrada */
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Botón de cerrar (X) */
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #721c24;
+}
+
+/* Ajuste para teléfonos */
+@media (max-width: 600px) {
+    .contenido-modal {
+        margin: 30% auto;
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+.contenedor-academico {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+    scroll-margin-top: 0px;
+}
+
+
+/* 4. Compatibilidad con móviles y tablets */
+@media (max-width: 768px) {
+    .contenedor-academico {
+        height: auto;
+        padding: 70px 20px;
+    }
+}
+
+
+.contenedor-academico h2 {
+  color: #9D2449;
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  
+}
+
+
+.fila-academica {
+    display: flex;
+    justify-content: center; 
+    gap: 80px;               
+    flex-wrap: wrap;         
+    width: 90%;
+    margin: 0 auto; 
+    padding-top: 50px;         
+}
+
+.tarjeta-academica:hover {
+   transform: scale(1.05);
+   text-decoration: underline;
+}
+
+
+.tarjeta-academica {
+    flex: 1;                 
+    min-width: 250px;        
+    max-width: 320px;        
+    text-decoration: none;
+}
+
+
+.imagen-container {
+    width: 100%;
+    height: 180px;           
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ddd;
+}
+
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+}
+
+
+.tarjeta-academica span {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+
+.seccion-separadora-video {
+    width: 100%;
+    padding: 60px 0;           
+    margin: 40px 0;            
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.seccion-separadora-video {
+    width: 100%;
+    padding: 60px 0;           
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-video {
+    width: 90%;               
+    max-width: 850px;         
+    text-align: center;
+}
+
+.contenido-video h2 {
+  color: #9D2449;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+
+.video-responsivo {
+    position: relative;
+    padding-bottom: 56.25%;   
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;      
+}
+
+.video-responsivo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+@media (max-width: 768px) {
+    .seccion-separadora-video {
+        padding: 40px 0;      
+    }
+
+    .contenido-video h2 {
+        font-size: 2.2rem;    
+    }
+    
+    .video-responsivo {
+        border-radius: 10px;  
+    }
+}
+
+
+
+
+
+
+#btnArriba {
+    display: none;           
+    position: fixed;        
+    bottom: 100px;           
+    right: 30px;            
+    z-index: 1000;          
+    
+    
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;     
+    background-color: #6a1b4d;
+    color: white;           
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s, transform 0.3s; 
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#btnArriba:hover {
+    background-color: #4a1036; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1);      /* Crece un poquito */
+}
+
+/* Efecto al hacer clic */
+#btnArriba:active {
+    transform: scale(0.9);      /* Se encoge un poco al presionarlo */
+}
+
+
+
+
+footer {
+  background: rgb(97, 18, 50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+}

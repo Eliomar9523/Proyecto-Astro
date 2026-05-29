@@ -1,0 +1,119 @@
+---
+import '../styles/Material.css';
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela Primaria Vicente Guerrero</title>
+  <link rel="stylesheet" href="Material.css">
+</head>
+
+<body>
+<header class="fondo">
+  <div class="nombre">
+    <h2>Esc. Prim. Vicente Guerrero</h2>
+    <h2>C. C .T. 24DPB0301B</h2>
+  </div>
+
+  
+  <nav class="enlaces" id="menu">
+    <a href="/">Inicio</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+  </nav>
+</header>
+
+<!-- Botón hamburguesa -->
+<div class="hamburguesa" id="btnHamburguesa">&#9776;</div>
+
+<!-- Menú lateral -->
+<nav class="menu-lateral" id="menuLateral">
+    <a href="/">Inicio</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+</nav>
+
+<main>
+
+<section class="material-didactico">
+  <h2>Material Didáctico</h2>
+
+  <!-- Buscador -->
+  <div class="buscador">
+    <input type="text" id="search" placeholder="Buscar libro...">
+    <button onclick="buscarLibro()">Buscar</button>
+  </div>
+
+  <!-- Galería de libros -->
+  <div class="libros">
+    <div class="libro">
+      <a href="libros/Bambi.pdf" target="_blank">
+        <img src="imagen-libros/bambi.png" alt="Libro 1">
+      </a>
+      <p>Bambi</p>
+    </div>
+
+    <div class="libro">
+      <a href="libros/Charles Perrault - GatoBotas.pdf" target="_blank">
+        <img src="imagen-libros/Gato con Botas.png" alt="Libro 2">
+      </a>
+      <p>Charles Perrault - El Gato con Botas</p>
+    </div>
+
+     <div class="libro">
+      <a href="libros/Aladino y la lámpara mágica.pdf" target="_blank">
+        <img src="imagen-libros/Aladin-y-la-lampara-magica.png" alt="Libro 2">
+      </a>
+      <p>Aladdín y la Lampara Magica</p>
+    </div>
+
+     <div class="libro">
+      <a href="libros/ALICIAENELPAISDELASMARAVILLAS.pdf" target="_blank">
+        <img src="imagen-libros/Alicia en el Pais de las Maravillas.png" alt="Libro 2">
+      </a>
+      <p>Alicia en el Pais de las Maravillas</p>
+    </div>
+
+     <div class="libro">
+      <a href="libros/Los tres cerditos.pdf" target="_blank">
+        <img src="imagen-libros/Los-tres-cerditos-Tus-cuentos.jpg" alt="Libro 2">
+      </a>
+      <p>Los tres cerditos</p>
+    </div>
+
+     <div class="libro">
+      <a href="libros/La estrella que no quería brillar.pdf" target="_blank">
+        <img src="imagen-libros/La-estrella-que-no-queria-brillar-Tus-Cuentos.jpg" alt="Libro 2">
+      </a>
+      <p>La estrella que no quería brillar</p>
+    </div>
+
+     <div class="libro">
+      <a href="libros/La Cenicienta.pdf" target="_blank">
+        <img src="imagen-libros/Cenicienta.png" alt="Libro 2">
+      </a>
+      <p>La Cenicienta</p>
+    </div>
+
+    <div class="libro">
+      <a href="libros/Blanca Nieves.pdf" target="_blank">
+        <img src="imagen-libros/Blanca Nieves y Los 7 Enanitos.png" alt="Libro 2">
+      </a>
+      <p>Blanca Nieves y Los 7 Enanitos</p>
+    </div>
+
+    <!-- Agregar más libros -->
+  </div>
+</section>
+</main>
+
+<footer>Primaria Vicente Guerrero @ 2026</footer> 
+
+<script>
+import '../scripts/Material.js';
+</script>
+
+</body>
+</html>

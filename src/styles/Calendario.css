@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+}
+
+.fondo {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(97, 18, 50);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.nombre {
+   position: relative;
+}
+
+.nombre h2:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nombre h2:last-child {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.enlaces a:hover {
+  color: #c9c428;
+}
+
+
+/* Estilo normal */
+.nombre h2 {
+  font-size: 24px; 
+}
+
+/*  pantallas de telefono */
+@media (max-width: 480px) {
+  .nombre h2 {
+    font-size: 16px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nombre h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre {
+    text-align: center;
+  }
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none; 
+  color: white;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 60px;
+  right: -250px; 
+  width: 200px;
+  height: 100%;
+  background-color:  rgb(97, 18, 50);  
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 10px;
+  z-index: 1000;
+  height: calc(100% - 60px);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+.menu-lateral a:hover {
+  background-color:#ae244d;
+}
+
+.menu-lateral.activo {
+  right: 0; 
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Ocultar menús */
+  header .enlaces {
+    display: none;
+  }
+
+  
+  .hamburguesa {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header.fondo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburguesa {
+    margin-top: 8px;
+  }
+}
+
+
+
+.contenedor-calendario {
+    padding: 60px 5%;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-seccion-moderno {
+    font-size: 2.8rem;
+    color: #9D2449;
+    margin-bottom: 50px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+
+.seccion-flex-info {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+
+.tarjeta-ciclo-texto {
+    width: 40%; 
+    min-width: 320px;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 8px solid #800020; 
+    text-align: left;
+}
+
+.periodo-escolar {
+    font-size: 5rem;
+    color: #1a2a3a;
+    font-weight: 800;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+
+.tarjeta-calendario-imagen {
+    width: 50%; 
+    min-width: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+
+
+.imagen-interactiva {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.boton-ampliar {
+    display: inline-block;
+    background-color: #800020;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.modal-state { display: none; }
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 2px 5px ;
+}
+
+
+.modal-state:checked + .modal-overlay {
+    display: flex;
+}
+
+
+
+
+@media (max-width: 600px) {
+    /* 1. Centramos los textos de la escuela y clave */
+    header, .encabezado-escolar, .logo-escuela {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 20px auto;
+    }
+
+    /* 2. Contenedor del calendario más estrecho (SLIM) */
+    .contenedor-calendario, 
+    .contenedor-principal {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; 
+    }
+
+    /* 3. Reducción de ancho al menú */
+    .tarjeta-ciclo-texto, 
+    .tarjeta-info {
+        width: 65%;        
+        max-width: 240px;  
+        min-width: 0; 
+        padding: 15px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-top: 4px solid #800020;
+    }
+
+    /* 4. Letras más compactas */
+    .periodo-escolar, 
+    .año-grande {
+        font-size: 1.6rem; 
+        letter-spacing: -1px;
+    }
+
+    .titulo-seccion-moderno,
+    .titulo-pagina {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    /* 5. Imagen miniatura pequeña */
+    .tarjeta-calendario-imagen, 
+    .tarjeta-miniatura {
+        width: 60%;        
+        max-width: 200px;
+        margin: 15px auto;
+    }
+
+    /* 6. Aseguramos al menú hamburguesa  */
+    .nav-menu, .menu-hamburguesa {
+        z-index: 9999; 
+    }
+}
+
+
+footer {
+  background: rgb(97, 18, 50);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+}
+
+@media(min-height:799px) {
+  footer {
+    position: relative;
+  }
+
+ 
+}
+
+
+.contenedor-fechas-auto {
+    width: 85%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.tarjeta-evento {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid #800020; /* Color guinda */
+}
+
+.fecha-cuadro {
+    background: #800020;
+    color: white;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+.seccion-notas {
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.seccion-notas h3 {
+  color: #9D2449; /* guinda SEP */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.lista-notas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-notas li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.nota-negrillas {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+
+
+.icono {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Formas y colores */
+.inicio {
+  background-color: black;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.fin {
+  background-color: black;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.suspension {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.jornada {
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.receso {
+  background-color: #006400; 
+}
+
+.consejo {
+  background-color: #9D2449; 
+}
+
+.consejo-regional {
+  background-color: #F4A6B0; 
+}
+
+.resultados {
+  border: 2px dashed #555;
+}
+
+.vacaciones {
+  background-color: #D3D3D3; 
+}
+
+.taller-con {
+  background-color: #8B4513; 
+}
+
+.taller-sin {
+  background-color: #e7d89a; 
+}
+
+.preinscripcion {
+  border: 2px solid #FF69B4; 
+}
+
+.calificaciones {
+  background-color: #87CEFA; 
+}

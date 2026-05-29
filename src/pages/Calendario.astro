@@ -1,0 +1,97 @@
+---
+import '../styles/Calendario.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela Primaria Vicente Guerrero</title>
+  <link rel="stylesheet" href="Calendario.css">
+</head>
+
+<body>
+<header class="fondo">
+  <div class="nombre">
+    <h2>Esc. Prim. Vicente Guerrero</h2>
+    <h2>C. C .T. 24DPB0301B</h2>
+  </div>
+
+  
+  <nav class="enlaces" id="menu">
+    <a href="/">Inicio</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+  </nav>
+</header>
+
+<!-- Botón hamburguesa -->
+<div class="hamburguesa" id="btnHamburguesa">&#9776;</div>
+
+<!-- Menú lateral -->
+<nav class="menu-lateral" id="menuLateral">
+    <a href="/">Inicio</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+</nav>
+
+
+<main class="contenedor-calendario">
+    <h2 class="titulo-seccion-moderno">Calendario Escolar 2025-2026</h2>
+    
+    <section class="seccion-flex-info">
+        <div class="tarjeta-ciclo-texto">
+            <span class="etiqueta-institucional">Ciclo Actual</span>
+            <h3 class="periodo-escolar">2025 - 2026</h3>
+            <p class="descripcion-corta">Consulta aquí las fechas importantes y periodos vacacionales oficiales para nuestra comunidad escolar.</p>
+            
+            <label for="abrir-modal" class="boton-ampliar">
+                Ampliar Calendario
+            </label>
+        </div>
+
+        <div class="tarjeta-calendario-imagen">
+            <img src="Imagenes/calendario-2025.jpg" alt="Calendario Escolar" class="imagen-interactiva">
+        </div>
+    </section>
+
+    <input type="checkbox" id="abrir-modal" class="modal-state">
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <label for="abrir-modal" class="cerrar-modal">&times;</label>
+            <img src="Imagenes/calendario-2025.jpg" alt="Calendario Ampliado">
+        </div>
+    </div>
+</main>
+
+
+<section class="seccion-notas">
+  <h3 class="titulo-seccion-moderno">Notas Aclaratorias</h3>
+  <ul class="lista-notas">
+    <li><span class="icono inicio"></span> Inicio de clases ciclo del escolar 2025 - 2026</li>
+    <li><span class="icono fin"></span> Fin de clases del ciclo escolar</li>
+    <li><span class="icono suspension"></span> Suspensión de labores docentes</li>
+    <li><span class="icono jornada"></span> Jornada de concientización sobre la gravedad del abuso sexual y el matrato inafntil</li>
+    <li><span class="icono receso"></span> Receso de clases</li>
+    <li><span class="icono consejo"></span> Consejo Técnico Escolar fase intesiva</li>
+    <li><span class="icono consejo-regional"></span> Consejo Técnico Escolar sesión ordinaria</li>
+    <li><span class="icono resultados"></span> Registro y comunicación de los resultados de la evaluación</li>
+    <li><span class="icono vacaciones"></span> Vacaciones</li>
+    <li><span class="icono taller-con"></span> Taller intensivo para personal con funciones de direccion </li>
+    <li><span class="icono taller-sin"></span> Taller intensivo para personal docente</li>
+    <li><span class="icono preinscripcion"></span> Preinscripción a preescolar, primer grado de primaria y primer grado de secundaria para el ciclo escolar 2026 - 2027</li>
+    <li><span class="icono calificaciones"></span> Registro de calificaciones</li>
+  </ul>
+</section>
+
+
+
+<footer>Primaria Vicente Guerrero @ 2026</footer>
+
+
+<script>
+import '../scripts/Calendario.js';
+</script>
+</body>
+</html>

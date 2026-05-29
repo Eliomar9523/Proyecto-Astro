@@ -1,0 +1,142 @@
+---
+import '../styles/style.css';
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela Primaria Vicente Guerrero</title>
+</head>
+
+<body>
+<header class="fondo">
+  <div class="nombre">
+    <h2>Esc. Prim. Vicente Guerrero</h2>
+    <h2>C. C .T. 24DPB0301B</h2>
+  </div>
+
+  
+  <nav class="enlaces" id="menu">
+    <a href="/">Inicio</a>
+    <a href="#academica">Información Académica</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+  </nav>
+</header>
+
+
+<div class="hamburguesa" id="btnHamburguesa">&#9776;</div>
+
+
+<nav class="menu-lateral" id="menuLateral">
+    <a href="/">Inicio</a>
+    <a href="#academica">Información Académica</a>
+    <a href="/Calendario">Calendario Escolar</a>
+    <a href="/Contacto">Contactos</a>
+</nav>
+
+
+
+    <div class="slider-container">
+        <div id="slides">
+            <img src="foto1.jpg" class="slide-img activa">
+            <img src="foto2.jpg" class="slide-img">
+            <img src="foto3.jpg" class="slide-img">
+            <img src="foto4.jpg" class="slide-img">
+            <img src="foto5.jpg" class="slide-img">
+            <img src="foto6.jpg" class="slide-img">
+        </div>
+    </div>
+</section>
+
+
+
+<div class="contenedor-pastillas">
+    <a href="javascript:void(0)" class="pastilla" onclick="abrirModal('nosotros')">
+        <div class="icono-bg">
+            <img src="Imagenes/nosotros.png" alt="">
+        </div>
+        <span>SOBRE NOSOTROS</span>
+    </a>
+
+    <a href="javascript:void(0)" class="pastilla" onclick="abrirModal('mision')">
+        <div class="icono-bg">
+            <img src="Imagenes/mision.png" alt="">
+        </div>
+        <span>MISIÓN</span>
+    </a>
+
+    <a href="javascript:void(0)" class="pastilla" onclick="abrirModal('vision')">
+        <div class="icono-bg">
+            <img src="Imagenes/vision.png" alt="">
+        </div>
+        <span>VISIÓN</span>
+    </a>
+</div>
+
+<div id="miModal" class="modal">
+    <div class="contenido-modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2 id="modalTitulo"></h2>
+        <hr>
+        <p id="modalTexto"></p>
+    </div>
+</div>
+
+<section id="academica" class="contenedor-academico">
+    <h2 class="titulo-academico">Información Académica</h2>
+    
+    <div class="fila-academica">
+        <a href="/Inscripciones" class="tarjeta-academica">
+            <div class="imagen-container">
+                <img src="Imagenes/inscripciones.png" alt="Inscripciones">
+                <div class="overlay-texto"></div>
+            </div>
+            <span>Inscripciones</span>
+        </a>
+
+        <a href="Vicente Guerrero/Vicente Guerrero/avisos.php" class="tarjeta-academica">
+            <div class="imagen-container">
+                <img src="Imagenes/avisos.png" alt="Avisos">
+                <div class="overlay-texto"></div>
+            </div>
+            <span>Avisos</span>
+        </a>
+
+        <a href="/Material" class="tarjeta-academica">
+            <div class="imagen-container">
+                <img src="Imagenes/material.png" alt="Material Didáctico">
+                <div class="overlay-texto"></div>
+            </div>
+            <span>Material Didactico</span>
+        </a>
+    </div>
+</section>
+
+
+<section class="seccion-separadora-video">
+    <div class="contenido-video">
+        <h2>Video Informativo</h2>
+        <div class="video-responsivo">
+            <iframe 
+                title="Video institucional de la Escuela Vicente Guerrero"
+                src="https://www.youtube.com/embed/BDogs9u-XU8" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+<footer>Primaria Vicente Guerrero @ 2026</footer> 
+
+
+<button id="btnArriba" title="Ir arriba">↑</button>
+
+<script>
+import '../scripts/script.js';
+</script>
+
+</body>
+</html>
